@@ -1,0 +1,138 @@
+{
+  "config_general": {
+    "lighteval_sha": "?",
+    "num_fewshot_seeds": 1,
+    "max_samples": null,
+    "job_id": "0",
+    "start_time": 6618.616616039,
+    "end_time": 19962.420730954,
+    "total_evaluation_time_secondes": "13343.804114915",
+    "model_config": {
+      "model_name": "allenai/OLMo-1B-hf",
+      "generation_parameters": {
+        "num_blocks": null,
+        "block_size": null,
+        "early_stopping": null,
+        "repetition_penalty": null,
+        "frequency_penalty": null,
+        "length_penalty": null,
+        "presence_penalty": null,
+        "max_new_tokens": null,
+        "min_new_tokens": null,
+        "seed": null,
+        "stop_tokens": null,
+        "temperature": 0,
+        "top_k": null,
+        "min_p": null,
+        "top_p": null,
+        "truncate_prompt": null,
+        "cache_implementation": null,
+        "response_format": null
+      },
+      "system_prompt": null,
+      "cache_dir": "~/.cache/huggingface/lighteval",
+      "tokenizer": null,
+      "subfolder": null,
+      "revision": "main",
+      "batch_size": 1,
+      "max_length": null,
+      "model_loading_kwargs": {},
+      "add_special_tokens": true,
+      "skip_special_tokens": true,
+      "model_parallel": false,
+      "dtype": null,
+      "device": "cuda",
+      "trust_remote_code": false,
+      "compile": false,
+      "multichoice_continuations_start_space": null,
+      "pairwise_tokenization": false,
+      "continuous_batching": false,
+      "override_chat_template": null
+    },
+    "model_name": "allenai/OLMo-1B-hf"
+  },
+  "results": {
+    "arc:challenge|3": {
+      "acc": 0.3191126279863481,
+      "acc_stderr": 0.013621696119173294
+    },
+    "all": {
+      "acc": 0.3191126279863481,
+      "acc_stderr": 0.013621696119173294
+    }
+  },
+  "versions": {},
+  "config_tasks": {
+    "arc:challenge|3": {
+      "name": "arc:challenge",
+      "prompt_function": "arc_prompt",
+      "hf_repo": "allenai/ai2_arc",
+      "hf_subset": "ARC-Challenge",
+      "metrics": [
+        {
+          "metric_name": "acc",
+          "higher_is_better": true,
+          "category": "LOGPROBS",
+          "sample_level_fn": "LoglikelihoodAcc(logprob_normalization=None)",
+          "corpus_level_fn": "mean",
+          "batched_compute": false
+        }
+      ],
+      "solver": [
+        "solve"
+      ],
+      "scorer": "score",
+      "sample_fields": "record_to_sample",
+      "sample_to_fewshot": null,
+      "filter": null,
+      "hf_revision": null,
+      "hf_filter": null,
+      "hf_avail_splits": [
+        "train",
+        "test"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": "random_sampling_from_train",
+      "generation_size": 1,
+      "generation_grammar": null,
+      "stop_sequence": [
+        "\n"
+      ],
+      "num_samples": null,
+      "original_num_docs": -1,
+      "effective_num_docs": -1,
+      "must_remove_duplicate_docs": false,
+      "num_fewshots": 3,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "arc:challenge|3": {
+      "hashes": {
+        "hash_examples": "17b0cae357c0259e",
+        "hash_full_prompts": "ef46db3751d8e999",
+        "hash_input_tokens": "c6a9f63eb0b0da4c",
+        "hash_cont_tokens": "3137edefdb35e2e5"
+      },
+      "truncated": 0,
+      "non_truncated": 0,
+      "padded": 0,
+      "non_padded": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "aaa6929c6d3771fb",
+      "hash_full_prompts": "c166e5d20ad58f4e",
+      "hash_input_tokens": "284788673171bc9c",
+      "hash_cont_tokens": "5af4935254addc5b"
+    },
+    "truncated": 0,
+    "non_truncated": 0,
+    "padded": 0,
+    "non_padded": 0
+  }
+}
